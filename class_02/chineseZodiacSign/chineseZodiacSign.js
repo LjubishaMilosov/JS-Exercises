@@ -45,4 +45,3 @@ const zodiacCalculatedIndex = (year - 4) % 12;
   }
 
   alert(`The Chinese Zodiac sign for the year ${year} is ${chineseZodiacSign}`);
-
