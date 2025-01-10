@@ -12,37 +12,41 @@ createCircleButton.addEventListener("click", function () {
     return;
   }
 
-  const radius = parseFloat(radiusInput.value);
+  const radius = radiusInput.value;
   circle = {
     radius: radius,
     getArea: function () {
-      return Math.PI * this.radius ** 2;
+      const pi = 3.14;
+      return this.radius*this.radius*pi;
     },
     getPerimeter: function () {
-      return 2 * Math.PI * this.radius;
+        const pi = 3.14;
+        return 2*this.radius*pi;
     },
   };
-
-  message.innerText = `Circle created with radius: ${radius}`;
+  console.log(circle);
+  message.innerText = `Circle created with radius: ${radius}` ;
   getAreaButton.disabled = false;
   getPerimeterButton.disabled = false;
 });
 
 getAreaButton.addEventListener("click", function () {
-  if (circle) {
-    message.innerText = `The area is: ${circle.getArea()}`;
+  if (!circle || !circle.hasOwnProperty("redius")) {
+    return;
   }
+  message.innerText = `The area is: ${circle.getArea()}`;
 });
 
 getPerimeterButton.addEventListener("click", function () {
-  if (circle) {
-    message.innerText = `The perimeter is: ${circle.getPerimeter()}`;
+    if (!circle || !circle.hasOwnProperty("redius")) {
+    return;
   }
+  message.innerText = `The perimeter is: ${circle.getPerimeter()}`;
 });
 
 
 
-// optimized version
+// another way
 
 function validateRadius() {
   if (!radiusInput.value || radiusInput.value <= 0) {
