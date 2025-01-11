@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #575252; /* Black background */
+    color: #ffffff; /* Ensure text is readable on black background */
+}
+
+.container {
+    background-color: rgba(193, 215, 46, 0.8); /* Semi-transparent background with the specified color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure heading is readable on black background */
+}
+
+#hangmanContainer {
+    margin-bottom: 20px;
+}
+
+#scaffoldDisplay {
+    font-family: monospace;
+    white-space: pre;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure scaffold is readable on black background */
+}
+
+#wordDisplay {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure word display is readable on black background */
+}
+
+#livesDisplay {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure lives display is readable on black background */
+}
+
+#guessedLetters {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure guessed letters are readable on black background */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 4px;
+    width: calc(90%);
+    margin-bottom: 10px;
+    background-color: #ffffff; /* Dark input background */
+    color: #333; /* Light text color */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 4px;
+    background-color: rgba(193, 215, 46, 0.8);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+button:hover {
+    background-color: rgba(99, 110, 23, 0.8);
+    transform: scale(1.2); /* Slightly enlarge the button on hover */
+}
+
+button:active {
+    background-color: rgba(99, 110, 23, 0.8);
+    transform: scale(1.2); /* Reset the scale on click */
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #8f6c6c; /* Dark select background */
+    color: #ffffff; /* Light text color */
+    appearance: none;
+}
+
+#message {
+    font-size: 18px;
+    color: #ffffff; /* Ensure message is readable on black background */
+    margin-top: 20px;
+}
